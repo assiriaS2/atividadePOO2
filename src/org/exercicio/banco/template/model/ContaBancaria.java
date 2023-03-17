@@ -24,7 +24,6 @@ public class ContaBancaria {
 		this.titular = titular;
 		this.saldo = 0;
 		this.status = true;
-		
 	}
 
 	/*
