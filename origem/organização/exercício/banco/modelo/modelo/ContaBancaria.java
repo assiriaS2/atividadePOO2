@@ -2,9 +2,9 @@ package org.exercicio.banco.template.model;
 
 /**
 *
-* Nome:
-* Curso:
-* Matrícula:
+* Nome: Assíria Renara de Oliveira Soares Silva 
+* Curso: IPI/2 período 
+* Matrícula: 2022INFIG0353
 * 
 */
 public class ContaBancaria {
@@ -66,13 +66,13 @@ public class ContaBancaria {
 	 */
 	public void sacar(double valor) {
 		if(status!=true) {
-			System.out.print("Conta inativa");
+			System.out.print("Conta inativa.");
 		}else if(valor <= 0 ) {
-			System.out.print("Valor invalido para saque");
+			System.out.print("Valor inválido para saque.");
 		}else if(valor > saldo) {
-			System.out.print("Saldo insuficiente");
+			System.out.print("Saldo insuficiente.");
 		}else {
-			saldo -= valor;
+			this.saldo -= valor;
 		}
 	}
 
@@ -86,11 +86,11 @@ public class ContaBancaria {
 	 */
 	public void fecharConta() {
 		if(status!= true) {
-			System.out.print("Conta ja inativa");
+			System.out.print("Conta ja inativa.");
 		}else if(saldo > 0 ) {
 			System.out.print("Conta com saldo. Nao eh possivel fecha-la.");
 		}else {
-			status=false;
+			this.status=false;
 		}
 		
 	}
@@ -102,9 +102,9 @@ public class ContaBancaria {
 	 */
 	public void reabrirConta() {
 		if(status != true) {
-			status = true;
+			this.status = true;
 		}else {
-			System.out.print("Conta já ativa");
+			System.out.print("Conta já ativa.");
 		}
 			
 	}
@@ -132,7 +132,7 @@ public class ContaBancaria {
 		}else if(quantia >= saldo) {
 			System.out.print("Saldo insuficiente para transferencia.");
 		}else {
-			saldo -= quantia;
+			this.saldo -= quantia;
 			destino.saldo += quantia;
 		}
 	}
