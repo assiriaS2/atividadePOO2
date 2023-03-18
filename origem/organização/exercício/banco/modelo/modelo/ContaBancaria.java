@@ -48,7 +48,7 @@ public class ContaBancaria {
 		if(valor > 0) {
 			this.saldo += valor;
 		}else {
-			System.out.print("Valor invalido para deposito");
+			System.out.print("Valor invalido para deposito.");
 		}
 	}
 
